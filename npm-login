@@ -1,19 +1,4 @@
-#!/usr/bin/expect -f
+#!/usr/bin/bash
 
-set pass $env(NPM_TOKEN)
-set scope $env(NPM_SCOPE)
-set registry $env(NPM_REGISTRY)
-
-spawn npm login --scope=@$scope --registry=$registry
-match_max 100000
-
-expect "Username"
-send "$scope\r"
-
-expect "Password"
-send "$pass\r"
-
-expect {
-   exit 0
-   eof
-}
+. /secrets/secrets
+/bin-files/npm-login-expect

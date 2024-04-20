@@ -1,3 +1,4 @@
 #!/usr/bin/bash
 
-echo $NPM_TOKEN | docker login ghcr.io -u brownhounds --password-stdin
+. /secrets/secrets
+echo $GITHUB_TOKEN | docker login $DOCKER_REGISTRY -u $GITHUB_USER --password-stdin

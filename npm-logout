@@ -1,3 +1,4 @@
 #!/usr/bin/bash
 
+. /secrets/secrets
 npm logout --registry="$NPM_REGISTRY"

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+timestamp=$(date +%s)
+
+commit_message="Dev Commit: $timestamp"
+
+git add .
+
+git commit -m "$commit_message"
+
+git push

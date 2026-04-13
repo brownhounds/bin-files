@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ssh ubuntu@35.214.109.72 -i ~/.ssh/id-replicate
